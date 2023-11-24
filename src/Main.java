@@ -20,6 +20,8 @@ public class Main {
             System.out.println("6 | Mostrar caminhamentos");
             System.out.println("7 | Soma de valores entre nodos");
             System.out.println("8 | Esvaziar árvore");
+            System.out.println("9 | Menor valor");
+            System.out.println("10 | Maior valor");
             System.out.println("0 | Sair do programa");
             System.out.println("---------------------------------------");
             System.out.println("Digite a opção desejada: ");
@@ -61,7 +63,12 @@ public class Main {
                 case 8 -> {
                     tree.clearTree();
                 }
-
+                case 9 -> {
+                    System.out.println("O menor valor encontrado na árvore é: "+tree.minNode());
+                }
+                case 10 -> {
+                    System.out.println("O maior valor encontrado na árvore é: "+tree.maxNode());
+                }
             }
         } while (op != 0);
 

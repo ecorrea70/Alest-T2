@@ -269,7 +269,19 @@ class BinarySearchTree {
      * @param defina a necessidade de parâmetros de acordo com a sua implementação
      * @return valor do menor nodo da árvore
      */
-    // public int minNode() {}
+    public int minNode() {
+        int min = 0;
+        Node current = root;
+        if(current.left == null){
+            return root.element;
+        }
+
+        while (current.left != null){
+            current = current.left;
+            min = current.element;
+        }
+        return min;
+    }
 
 
     /**
@@ -278,7 +290,19 @@ class BinarySearchTree {
      * @param defina a necessidade de parâmetros de acordo com a sua implementação
      * @return valor do maior nodo da árvore
      */
-    // public int maxNode() {}
+    public int maxNode() {
+        int max = 0;
+        Node current = root;
+        if(current.right == null){
+            return root.element;
+        }
+
+        while (current.right != null){
+            current = current.right;
+            max = current.element;
+        }
+        return max;
+    }
 
 
     /**
