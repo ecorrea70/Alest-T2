@@ -59,7 +59,11 @@ public class Main {
                     tree.caminhamentos();
                 }
                 case 7 -> {
-                    // tree.sumBetween();
+                    System.out.println("Digite o valor do nodo de inicio: ");
+                    int start = scan.nextInt();
+                    System.out.println("Digite o valor do nodo final: ");
+                    int end = scan.nextInt();
+                    System.out.println("A soma dos valores é: "+tree.sumBetween(tree.getRoot(), start, end));
                 }
                 case 8 -> {
                     tree.clearTree();
