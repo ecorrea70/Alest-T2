@@ -22,6 +22,7 @@ public class Main {
             System.out.println("8 | Esvaziar árvore");
             System.out.println("9 | Menor valor");
             System.out.println("10 | Maior valor");
+            System.out.println("11 | Quantidade de folhas");
             System.out.println("0 | Sair do programa");
             System.out.println("---------------------------------------");
             System.out.println("Digite a opção desejada: ");
@@ -68,6 +69,9 @@ public class Main {
                 }
                 case 10 -> {
                     System.out.println("O maior valor encontrado na árvore é: "+tree.maxNode());
+                }
+                case 11 -> {
+                    System.out.println("Quantidade de folhas na árvore: "+tree.countLeaves(tree.getRoot()));
                 }
             }
         } while (op != 0);

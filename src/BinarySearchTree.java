@@ -311,7 +311,20 @@ class BinarySearchTree {
      * @param defina a necessidade de parâmetros de acordo com a sua implementação
      * @return valor inteiro correspondente a quantidade de nodos folha
      */
-    //public int countLeaves() {}
+    public int countLeaves(Node current) {
+        int folhas = 0;
+        if (current.left == null && current.right == null) {
+            folhas++;
+        }
+        if (current.left != null) {
+            folhas += countLeaves(current.left);
+        }
+        if (current.right != null) {
+            folhas += countLeaves(current.right);
+        }
+
+        return folhas;
+    }
 
 
     /**
